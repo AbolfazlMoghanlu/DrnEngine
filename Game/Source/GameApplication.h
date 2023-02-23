@@ -4,6 +4,9 @@
 
 class GameApplication : public Drn::Application
 {
+public:
+	
+
 protected:
 	virtual void Startup() override;
 	virtual void Shutdown() override;

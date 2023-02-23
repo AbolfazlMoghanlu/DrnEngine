@@ -1,11 +1,15 @@
 #pragma once
 
+#include "DrnPCH.h"
+
 namespace Drn
 {
+	class Window;
+
 	class Application
 	{
 	public:
-		virtual void Run();
+		virtual void Run(HINSTANCE inhInstance);
 
 	protected:
 		virtual void Startup();
@@ -14,5 +18,7 @@ namespace Drn
 		virtual void Tick(float DeltaTime);
 
 		bool bRunning = true;
+
+		std::unique_ptr<Window> m_Window = nullptr;
 	};
 }

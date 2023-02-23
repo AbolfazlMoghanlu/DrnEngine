@@ -94,7 +94,7 @@ project "Engine"
 	
 project "Game"
 	location "Game"
-	kind "ConsoleApp"
+	kind "WindowedApp"
 	language "c++"
 	cppdialect "c++17"
 	staticruntime "on"
