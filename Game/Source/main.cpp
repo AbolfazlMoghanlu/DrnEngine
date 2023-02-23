@@ -1,8 +1,11 @@
 #include <iostream>
 
+#include "GameApplication.h"
+
 int main()
 {
-	std::cout << "Hello!";
+	GameApplication App = GameApplication();
+	App.Run();
 
 	return 0;
 }
