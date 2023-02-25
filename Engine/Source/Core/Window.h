@@ -29,6 +29,8 @@ namespace Drn
 		void Tick(float DeltaTime);
 
 		void Resize(int16 InWidth, int16 InHeight);
+
+		bool PendingClose() const; 
 	
 	protected:
 		uint16 Width;
@@ -38,6 +40,8 @@ namespace Drn
 
 		HINSTANCE m_hInstance;
 		HWND m_WindowHandle;
+
+		bool g_bPendingClose = false;
 
 	private:
 	};

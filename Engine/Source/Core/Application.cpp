@@ -1,6 +1,7 @@
 #include "DrnPCH.h"
 #include "Application.h"
 #include "Window.h"
+#include "Renderer/Renderer.h"
 
 namespace Drn
 {
@@ -10,7 +11,7 @@ namespace Drn
 
 		Startup();
 
-		while (bRunning)
+		while (bRunning && !m_Window->PendingClose())
 		{
 			Tick(1.0f);
 		}
@@ -20,19 +21,22 @@ namespace Drn
 
 	void Application::Startup()
 	{
-		std::cout << "Start application";
+		std::cout << "Start application" << std::endl;
 
-		
+		Renderer::Init();
 
 	}
 
 	void Application::Shutdown()
 	{
-		std::cout << "Shutdown application";
+		std::cout << "Shutdown application" << std::endl;
+
+		Renderer::Shutdown();
 	}
 
 	void Application::Tick(float DeltaTime)
 	{
 		m_Window->Tick(DeltaTime);
+		Renderer::Tick(DeltaTime);
 	}
 }
