@@ -10,6 +10,8 @@ namespace Drn
 
 		static void Tick(float DeltaTime);
 
+		static ID3D12Device* g_Device;
+
 	private:
 
 	};

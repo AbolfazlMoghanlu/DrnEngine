@@ -48,6 +48,10 @@ project "Engine"
 	
 	links
 	{
+		"d3d12.lib",
+		"D3DCompiler.lib",
+		"DXGI.lib",
+		"dxguid.lib"
 	}
 	
 	filter "configurations:DebugEditor"
